@@ -32,6 +32,7 @@ app.use(express.urlencoded({
   parameterLimit: 100000,
   extended: true,
 }));
+app.use(express.static(path.join(__dirname, '/public')));
 
 /* API ENDPOINTS */
 app.use('/api', postsRoutes);
