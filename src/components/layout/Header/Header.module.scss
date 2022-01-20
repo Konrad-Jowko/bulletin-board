@@ -1,0 +1,64 @@
+@import '../../../styles/global.scss';
+
+.root {
+  .appBar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background: $header-background;
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  .toolBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+
+    .logo {
+      font-size: $header-logo-font-size;
+      fill: $header-logo-primary-color;
+      transition: all 1s;
+      filter: $header-logo-primary-filter;
+
+      &:hover {
+        transform: scale(1.1);
+        fill: $header-logo-secondary-color;
+        cursor: pointer;
+        filter: $header-logo-secondary-filter;
+      }
+    }
+
+    .slogan {
+      font-size: $header-slogan-font-size;
+      text-shadow: 1px 1px rgba(0,0,0, 0.5);
+      font-family: $header-slogan-font-family;
+      margin-bottom: 10px;
+    }
+
+    button {
+      font-size: $header-buttons-font-size;
+      margin: 0.5em;
+    }
+
+    .buttonPrimary {
+      @include buttonSideMargin($header-buttons-margin);
+      @include button(white, #ffc745);
+    }
+
+    .buttonSecondary {
+      @include buttonSideMargin($header-buttons-margin);
+      @include button(white, #ffc745);
+    }
+
+    .buttonLogout {
+      @include buttonSideMargin($header-buttons-margin);
+      @include button(white, #e61400);
+    }
+
+    .inlineIcon {
+      margin-right: .5em;
+    }
+  }
+}

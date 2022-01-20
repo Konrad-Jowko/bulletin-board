@@ -1,0 +1,122 @@
+@import '../../../styles/global.scss';
+
+.root {
+  padding: 0;
+  padding-top: $homepage-padding-top;
+  margin: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+
+  .link {
+    margin: 0 auto;
+  }
+
+  .buttonContainer {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .button {
+    font-size: $homepage-button-font-size;
+    @include button($button-primary-color, $homepage-button-secondary-color);
+    margin: .5em;
+  }
+
+  .header {
+    text-align:  center;
+    font-size: $homepage-header-font-size;
+    color: #fff;
+    font-family: $homepage-header-font-family;
+    }
+
+  .accordion {
+    padding: .5rem;
+    margin: clamp(.2rem, calc(.2rem + 1vw), .5rem);
+    background: $homepage-accordion-background;
+
+    .summary {
+      display: flex;
+      flex-flow: row nowrap;
+
+      .icon {
+        fill: $homepage-accordion-icon-color;
+      }
+      .title {
+        font-family: $homepage-accordion-title-font-family;
+        width: 60%;
+        font-size: $homepage-accordion-title-font-size;
+        color: #fff;
+        border-right: 3px solid white;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      .subtitle {
+        color: $homepage-accordion-subtitle-color;
+
+        span {
+          display: flex;
+          flex-flow: row nowrap;
+          text-align: center;
+          padding: .4em;
+          margin: 0 .5em;
+          font-size: $homepage-accordion-date-font-size;
+          background: $homepage-accordion-date-background;
+          border-radius: 1em;
+        }
+      }
+    }
+
+    .details {
+      border-top: 3px solid white;
+      padding: 2em 1em;
+      text-align: justify;
+      display: flex;
+      flex-flow: column nowrap;
+      font-size: $homepage-accordion-details-font-size;
+      color: $homepage-accordion-details-font-color;
+
+      .text {
+        min-height: clamp(50px, calc(50px + 2vw), 100px);
+      }
+    }
+
+    .additional {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+
+      .additionalInfoContainer {
+        padding: 1em;
+        text-align: center;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+
+        .additionalInfo {
+          text-align: center;
+          background: $homepage-accordion-detail-background;
+          width: clamp(150px, calc(150px + 10vw), 300px);
+          padding: 0.5em 1em;
+          margin: .5em;
+          border-radius: 1em;
+        }
+      }
+    }
+  }
+
+  .pagination {
+    padding: 1.2em;
+    margin: 1.2em;
+    display: flex;
+    justify-content: center;
+
+    & * {
+      font-size: $homepage-pagination-font-size;
+      color: $homepage-pagination-font-color;
+    }
+  }
+ }

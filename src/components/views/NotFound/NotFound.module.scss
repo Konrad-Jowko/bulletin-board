@@ -1,0 +1,36 @@
+@import '../../../styles/global.scss';
+
+.root {
+  padding: 10rem 2rem 4rem 2rem;
+  padding-top: $notFound-padding-top;
+  margin: 1rem auto;
+  width: calc(max(300px, 80%));
+  overflow: hidden;
+    color: $notFound-font-color;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background: $notFound-background;
+    min-height: 50vh;
+    padding: 4rem;
+    font-size: $notFound-font-size;
+
+    .icon {
+      width: clamp(150px, calc(150px + 10vw), 300px);
+      height: clamp(150px, calc(150px + 10vw), 300px);
+    }
+
+    .button {
+      font-size: $notFound-button-font-size;
+      @include button($button-primary-color, $notFound-button-secondary-color);
+    }
+  }
+}

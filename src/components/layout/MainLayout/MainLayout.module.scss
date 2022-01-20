@@ -1,0 +1,12 @@
+@import '../../../styles/global.scss';
+
+.root {
+  position: static;
+  background-image: $mainLayout-background;
+  width: 100%;
+  min-height: 101vh;
+  margin-top: -20px;
+  bottom: 20px;
+  padding-bottom: 10px;
+  font-family: $mainLayout-font;
+}

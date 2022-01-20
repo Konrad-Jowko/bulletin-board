@@ -1,0 +1,148 @@
+ @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Ubuntu&display=swap');
+
+/* GLOBAL SETTINGS */
+
+// Fonts & Font sizes
+$font-headers: 'Oswald', sans-serif;
+$font-primary: 'Ubuntu', sans-serif;
+
+$basic-font-size: clamp(.5rem, calc(.5rem + 1vw), 1.4rem);
+
+// Shadows
+$basic-box-shadow: .1em .1em .3em gray;
+
+// Colors
+$main-background-color: linear-gradient(to right top, #bd07f0, #855cff, #4c7bff, #2d8ef0, #4a9ad8);
+$blue-background-color: rgba(0, 0, 255, 0.4);
+$blue-transparent-background: rgba(0, 103, 255, .5);
+$transparent-background: rgba(255, 255, 255, .2);
+
+$color-orange: #ffc745;
+$color-pink: #ff3876;
+$color-white: #fff;
+$color-violet: #8E26B3;
+$color-pearl: #FAEAFF;
+$color-gray: #9BAEBC;
+$color-lightgray: #D8E5E3;
+$color-dark: #677987;
+
+$button-primary-color: $color-white;
+
+
+$font-color-fair: #c8d6e5;
+$bg-color: #576574;
+
+/* COMPONENT SETTINGS */
+
+// MainLayout
+$mainLayout-background: $main-background-color;
+$mainLayout-font: $font-primary;
+
+// Header
+$header-background: $blue-background-color;
+$header-logo-font-size: clamp(30px, calc(30px + 2vw), 45px);
+$header-logo-primary-color: $color-orange;
+$header-logo-secondary-color: $color-pink;
+$header-logo-primary-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
+$header-logo-secondary-filter: drop-shadow(3px 5px 2px rgba(0, 0, 0, 0.4));
+$header-slogan-font-size: clamp(14px, calc(14px + 1vw), 35px);
+$header-slogan-font-family: $font-headers;
+$header-buttons-font-size: clamp(8px, calc(8px + .5vw), 1rem);
+$header-buttons-margin: 2rem;
+
+// Select
+$select-font-color: $color-white;
+$select-font-family: $font-primary;
+$select-font-size: $basic-font-size;
+$select-background: $transparent-background;
+$select-option-background: $blue-transparent-background;
+$select-option-text-shadow: 0 0 1em hsla(0, 0%, 100%, 1), 0 0 2em currentColor;
+
+// WarningModal
+$warningModal-font-color: $color-white;
+$warningModal-font-size: clamp(12px, calc(12px + 1vw), 45px);
+$warningModal-root-background:  rgba(0, 0, 0, .9);
+$warningModal-container-background:  rgba(255, 255, 255, .7);
+$warningModal-button-font-size: clamp(10px, calc(10px + 1vw), 25px);
+$warningModal-secondary-color: $color-violet;
+
+// Homepage
+$homepage-padding-top: clamp(5rem, calc(15rem - 10vw), 15rem);
+$homepage-button-font-size: clamp(12px, calc(12px + .5vw), 24px);
+$homepage-button-secondary-color: $color-violet;
+$homepage-header-font-size: clamp(1.2rem, calc(1.2rem + 1vw), 3rem);
+$homepage-header-font-family: $font-headers;
+$homepage-accordion-background: $transparent-background;
+$homepage-accordion-icon-color: $color-white;
+$homepage-accordion-title-font-size: clamp(9px, calc(9px + 1vw), 30px);
+$homepage-accordion-title-font-family: $font-headers;
+$homepage-accordion-subtitle-color: $color-pearl;
+$homepage-accordion-date-background: $blue-transparent-background;
+$homepage-accordion-date-font-size: clamp(8px, calc(8px + 1vw), 30px);
+$homepage-accordion-details-font-size: clamp(12px, calc(12px + 1vw), 30px);
+$homepage-accordion-details-font-color: $color-white;
+$homepage-accordion-detail-background: $blue-transparent-background;
+$homepage-pagination-font-size: clamp(1rem, calc(1rem + 1vw), 1.5rem);
+$homepage-pagination-font-color: $color-white;
+
+// Not Found
+$notFound-padding-top: clamp(10rem, calc(20rem - 10vw), 20rem);
+$notFound-font-color: $color-white;
+$notFound-background: $transparent-background;
+$notFound-font-size: clamp(12px, calc(12px + 1vw), 45px);
+$notFound-button-font-size: clamp(10px, calc(10px + 1vw), 25px);
+$notFound-button-secondary-color: $color-violet;
+
+// Post / PostAdd / PostEdit
+$post-padding-top: clamp(10rem, calc(20rem - 10vw), 20rem);
+$post-font-color: $color-white;
+$post-background: $transparent-background;
+$post-title-font-size: clamp(20px, calc(20px + 1vw), 40px);
+$post-title-font-family: $font-headers;
+$post-title-shadow: $basic-box-shadow;
+$post-detail-background: $transparent-background;
+$post-text-font-size: clamp(12px, calc(12px + 1vw), 1.6rem);
+$post-dataItem-font-size: clamp(14px, calc(14px + 1vw), 20px);
+$post-dataItem-box-shadow: $basic-box-shadow;
+$post-dataTitle-background: $blue-transparent-background;
+$post-dataTitle-font-family: $font-headers;
+$post-noPhoto-background: $color-gray;
+$post-noPhoto-font-size: clamp(1rem, calc(1rem + 1vw), 3rem);
+$post-noPhoto-icon-size: clamp(2rem, calc(2rem + 1vw), 4rem);
+$post-noPhoto-font-color: $color-dark;
+$post-noPhoto-decal-color: $color-lightgray;
+$post-noPhoto-font-size: clamp(1rem, calc(1rem + 1vw), 3rem);
+$post-photo-font-size: clamp(1rem, calc(1rem + 1vw), 3rem);
+$post-input-shadow: $basic-box-shadow;
+$post-titleLabel-font-size: clamp(1rem, calc(1rem + 1vw), 1.6rem);
+$post-input-font-size: $basic-font-size;
+$post-input-font-family: $font-primary;
+$post-input-warning-color: $color-pink;
+$post-photoButton-font-size: clamp(14px, calc(14px + 1vw), 20px);
+$post-button-font-size: clamp(11px, calc(11px + .2vw), 18px);
+$post-button-secondary-color: $color-violet;
+$post-draftButton-secondary-color: $color-orange;
+$post-button-warning-color: $color-pink;
+
+
+/* MIXINS */
+@mixin button($primary, $secondary) {
+    text-decoration: none;
+    border: 3px solid #{$primary};
+    color: #{$primary};
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    transition: all 1s;
+    font-family: $font-primary;
+
+    &:hover {
+      color: #{$secondary};
+      border: 3px solid #{$secondary};
+      transform: scale(1.2);
+
+    }
+}
+
+@mixin buttonSideMargin($margin) {
+    margin-left: #{$margin};
+    margin-right: #{$margin};
+}

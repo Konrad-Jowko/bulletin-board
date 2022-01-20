@@ -1,0 +1,40 @@
+@import '../../../styles/global.scss';
+
+.root {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background:$warningModal-root-background;
+  color: $warningModal-font-color;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background: $warningModal-container-background;
+    min-height: 50vh;
+    padding: 4rem;
+    font-size: $warningModal-font-size;
+    width: calc(max(300px, 80%));
+
+    .icon {
+      width: clamp(150px, calc(150px + 10vw), 300px);
+      height: clamp(150px, calc(150px + 10vw), 300px);
+    }
+
+    .button {
+      text-decoration: none;
+      font-size: $warningModal-button-font-size;
+      @include button($button-primary-color, $warningModal-secondary-color);
+    }
+  }
+}
