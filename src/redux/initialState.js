@@ -7,7 +7,7 @@ export const initialState = {
       active: false,
       error: false,
     },
-    isLoggedIn: false,
+    isLoggedIn: null,
     admin: false,
     paginationPage: 0,
     upToDate: false,
