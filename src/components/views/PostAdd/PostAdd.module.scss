@@ -25,6 +25,26 @@
       box-shadow: $post-input-shadow;
     }
 
+    ::-webkit-input-placeholder {
+      color: $post-font-color;
+      opacity: 0.8;
+    }
+
+    ::-moz-placeholder {
+      color: $post-font-color;
+      opacity: 0.8;
+    }
+
+    :-ms-input-placeholder {
+      color: $post-font-color;
+      opacity: 0.8;
+    }
+
+    :-moz-placeholder {
+      color: $post-font-color;
+      opacity: 0.8;
+    }
+
     [class~=warning] {
       color: $post-input-warning-color;
     }
