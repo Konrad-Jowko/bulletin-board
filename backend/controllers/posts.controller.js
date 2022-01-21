@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const shortid = require('shortid');
 const Post = require('../models/post.model');
 
@@ -275,7 +276,7 @@ exports.postPhoto = async (req, res) => {
     photo.name = nameArray.join('.');
 
     // Saving the file in Public folder
-    photo.mv(__dirname + '../../../public/uploaded/' + photo.name);
+    photo.mv(path.join(__dirname, '../public/uploaded/', photo.name));
 
     res.send(photo.name);
   }
@@ -288,7 +289,7 @@ exports.postPhoto = async (req, res) => {
 exports.deleteSavedPhoto = async (req, res) => {
   try {
     const result = await Post.findById(req.params.id);
-    const path = __dirname + '../../../public/uploaded/' + req.body.name;
+    const filePath = path.join(__dirname, '../public/uploaded/', req.body.name);
 
     // Deleting data about photo from Database
     result.photo = null;
@@ -296,7 +297,7 @@ exports.deleteSavedPhoto = async (req, res) => {
 
     // Deleting the photo from Public folder
     try {
-      fs.unlink(path, function(err) {
+      fs.unlink(filePath, function(err) {
         if (err) {
           console.log(false);
         } else {
@@ -317,10 +318,10 @@ exports.deleteSavedPhoto = async (req, res) => {
 
 /* CONTROLLER DELETING PHOTO NOT YET SAVED IN SPECIFIC POST */
 exports.deletePhoto = async (req, res) => {
-  const path = __dirname + '../../../public/uploaded/' + req.body.deletePhoto;
+  const filePath = path.join(__dirname, '../public/uploaded/', req.body.deletePhoto);
 
   try {
-    fs.unlink(path, function(err) {
+    fs.unlink(filePath, function(err) {
       if (err) {
         res.status(500).json(err);
       } else {
